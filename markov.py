@@ -9,7 +9,7 @@ from random import random
 
 
 archive = open("headlines.txt")
-titles = archive.read().split("\n")
+titles = archive.read().split(", ")
 archive.close()
 markov_map = defaultdict(lambda:defaultdict(int))
 
