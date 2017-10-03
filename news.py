@@ -16,6 +16,6 @@ with open("headlines.txt", "w") as output_file:
 		genurl="%s%s.json?print=pretty" % (item_url, i) 
 		item_response=urllib2.urlopen(genurl)  
 		parsed_response=json.load(item_response)
-		output_file.write(parsed_response["title"].encode('utf-8'))
+		output_file.write(parsed_response["title"].encode('utf-8')+", ")
 
 
